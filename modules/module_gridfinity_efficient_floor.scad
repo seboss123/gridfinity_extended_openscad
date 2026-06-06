@@ -14,7 +14,7 @@ module efficient_floor_grid(
   efficientFloorGridHeight=0,
   align_grid = [ "near", "near"],
   margins=0) {
-  if (flat_base != FlatBase_off) {
+  if (flat_base == FlatBase_rounded) {
     EfficientFloor(num_x, num_y, 
       floor_thickness, 
       margins, 

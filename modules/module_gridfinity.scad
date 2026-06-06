@@ -287,7 +287,7 @@ module pad_copy(
 
   if(env_help_enabled("debug")) echo("pad_copy", flat_base=flat_base, sub_pitch=sub_pitch, minimium_size=minimium_size);
  
-  if (flat_base != FlatBase_off) {
+  if (flat_base == FlatBase_rounded) {
     $pad_copy_size = [num_x, num_y];
     if(env_help_enabled("debug")) echo("pad_grid_flat_base", pad_copy_size=$pad_copy_size);
     if($pad_copy_size.x >= minimium_size && $pad_copy_size.y >= minimium_size) {

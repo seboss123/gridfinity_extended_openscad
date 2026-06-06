@@ -22,13 +22,13 @@ height = [3, 0]; //0.1
 // Fill in solid block (overrides all following options)
 filled_in = "disabled"; //[disabled, enabled, enabledfilllip:"Fill cup and lip"]
 // Wall thickness of outer walls. default, height < 8 0.95, height < 16 1.2, height > 16 1.6 (Zack's design is 0.95 mm)
-wall_thickness = 0;  // .01
+wall_thickness = 0.95;  // .01
 //under size the bin top by this amount to allow for better stacking
 headroom = 0.8; // 0.1
 
 /* [Cup Lip] */
 // Style of the cup lip
-lip_style = "normal";  // [ normal, reduced, reduced_double, minimum, none:not stackable ]
+lip_style = "none";  // [ normal, reduced, reduced_double, minimum, none:not stackable ]
 // Below this the inside of the lip will be reduced for easier access.
 lip_side_relief_trigger = [1,1]; //0.1
 // Create a relief in the lip
@@ -102,8 +102,8 @@ cavity_floor_radius = -1;// .1
 efficient_floor = "off";//[off,on,rounded,smooth]
 // AKA half pitch. Enable to subdivide bottom pads to allow sub-cell offsets
 sub_pitch = 1; //[1:"disabled",2:"half pitch",3:"third pitch",4:"quarter pitch"]
-// Removes the internal grid from base the shape
-flat_base = "off"; // [off, gridfinity:gridfinity stackable, rounded]
+ // Removes the internal grid from base the shape
+flat_base = "gridfinity"; // [off, gridfinity:gridfinity stackable, rounded]
 // Remove floor to create a vertical spacer
 spacer = false;
 //Pads smaller than this will not be rendered as it interferes with the baseplate. Ensure appropriate support is added in slicer.

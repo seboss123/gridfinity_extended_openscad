@@ -97,8 +97,8 @@ function calculateWallplacard(
 
         height = min(wp_height, wall_height),
         width = min(wp_width, wall_width),
-        depth = wp_depth==0 ? wall_thickness : wp_depth,
-        )
+        depth = wp_depth==0 ? wall_thickness : wp_depth
+      )
       [is_enabled, wp_style, width, height, depth, wp_corner_radius, off_horiz, off_vert, off_depth];
 
 module Wallplacard(

@@ -55,13 +55,7 @@ module brick_pattern(
         size = [bricks[ix], h, thickness];
         if(size.x > min(cell_size.x,cell_size.y)*0.5 && size.y > min(cell_size.x,cell_size.y)*0.5)
           translate([pos,0])
-          roundedCube(
-            size = size, 
-            sideRadius = corner_radius,
-            //supportReduction_x = [0,1]
-            //supportReduction_y = [0,0],
-            //supportReduction_z = [0,0]
-            );
+            cube([size.x, size.y, size.z]);
       }
     }
   }

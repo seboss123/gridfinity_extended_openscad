@@ -91,7 +91,7 @@ module bentWall(
     if(separation != 0) { 
       translate(centred_x ? [0,0,0] : [(thickness.x+separation)/2,0,0])
       translate([0,bendPosition,0])
-      linear_extrude(height, scale = [top_scale,1], )
+      linear_extrude(height, scale = [top_scale,1])
       SBogen(
         TwoD=thickness.x,
         dist=separation,

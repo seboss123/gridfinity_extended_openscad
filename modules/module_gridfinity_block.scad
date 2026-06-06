@@ -98,9 +98,10 @@ module grid_block(
   }
   
   translate(gridfinityRenderPosition(position,num_x,num_y))
-  difference() {
-    baseHeight = 5;
-    intersection() {
+  intersection() {
+    difference() {
+      baseHeight = 5;
+      intersection() {
       //Main cup outer shape
       color(env_colour(color_cup))
         tz(-fudgeFactor)
@@ -203,8 +204,16 @@ module grid_block(
           magnetChamfer = cupBase_settings[iCupBase_MagnetChamfer]
         );
     }
+    }
+    // Force exact outer dimensions after all boolean operations
+    translate([env_clearance().x/2, env_clearance().y/2, -100])
+      cube([
+        num_x*env_pitch().x - env_clearance().x,
+        num_y*env_pitch().y - env_clearance().y,
+        200
+      ]);
   }
- 
+  
   HelpTxt("grid_block",[
     "num_x",num_x
     ,"num_y",num_y
